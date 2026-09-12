@@ -80,6 +80,7 @@ class DisplaySwitcherApp(tk.Tk):
         profiles.rowconfigure(0, weight=1)
         profiles.columnconfigure(0, weight=1)
         self.profile_list = tk.Listbox(profiles, activestyle="dotbox")
+        self.profile_list.bind("<Double-Button-1>", lambda _: self.apply_selected_profile())
         self.profile_list.grid(row=0, column=0, sticky="nsew")
         profile_buttons = ttk.Frame(profiles)
         profile_buttons.grid(row=1, column=0, sticky="ew", pady=(10, 0))

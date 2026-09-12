@@ -5,7 +5,7 @@ import os
 from frontend import DisplaySwitcherApp
 
 
-# Small launcher kept separate from the UI so imports and startup stay obvious.
+# Small launcher kept separate from the UI so imports and startup stay obvious
 def main() -> int:
     if os.name != "nt":
         print("This tool is Windows-only because it uses the Windows display APIs.")
